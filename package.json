@@ -1,0 +1,187 @@
+{
+  "name": "lemonsqueezy.ts",
+  "version": "0.1.7",
+  "description": "JavaScript / TypeScript SDK for the Lemon Squeezy API",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nurodev/lemonsqueezy.ts.git"
+  },
+  "homepage": "https://github.com/nurodev/lemonsqueezy.ts",
+  "bugs": "https://github.com/nurodev/lemonsqueezy.ts/issues",
+  "author": {
+    "name": "nurodev",
+    "email": "me@nuro.dev",
+    "url": "https://nuro.dev"
+  },
+  "keywords": [
+    "api",
+    "lemonsqueezy",
+    "typescript"
+  ],
+  "license": "MIT",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/**/*",
+    "LICENSE",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=16.*"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./checkout": {
+      "import": "./dist/modules/checkout.mjs",
+      "require": "./dist/modules/checkout.js"
+    },
+    "./customer": {
+      "import": "./dist/modules/customer.mjs",
+      "require": "./dist/modules/customer.js"
+    },
+    "./client": {
+      "import": "./dist/client/index.mjs",
+      "require": "./dist/client/index.js"
+    },
+    "./discount": {
+      "import": "./dist/modules/discount.mjs",
+      "require": "./dist/modules/discount.js"
+    },
+    "./file": {
+      "import": "./dist/modules/file.mjs",
+      "require": "./dist/modules/file.js"
+    },
+    "./licenseKey": {
+      "import": "./dist/modules/licenseKey.mjs",
+      "require": "./dist/modules/licenseKey.js"
+    },
+    "./licenseKeyInstance": {
+      "import": "./dist/modules/licenseKeyInstance.mjs",
+      "require": "./dist/modules/licenseKeyInstance.js"
+    },
+    "./modules": {
+      "import": "./dist/modules/index.mjs",
+      "require": "./dist/modules/index.js"
+    },
+    "./order": {
+      "import": "./dist/modules/order.mjs",
+      "require": "./dist/modules/order.js"
+    },
+    "./orderItem": {
+      "import": "./dist/modules/orderItem.mjs",
+      "require": "./dist/modules/orderItem.js"
+    },
+    "./product": {
+      "import": "./dist/modules/product.mjs",
+      "require": "./dist/modules/product.js"
+    },
+    "./store": {
+      "import": "./dist/modules/store.mjs",
+      "require": "./dist/modules/store.js"
+    },
+    "./subscription": {
+      "import": "./dist/modules/subscription.mjs",
+      "require": "./dist/modules/subscription.js"
+    },
+    "./subscriptionInvoice": {
+      "import": "./dist/modules/subscriptionInvoice.mjs",
+      "require": "./dist/modules/subscriptionInvoice.js"
+    },
+    "./types": {
+      "import": "./dist/types.mjs",
+      "require": "./dist/types.js"
+    },
+    "./user": {
+      "import": "./dist/modules/user.mjs",
+      "require": "./dist/modules/user.js"
+    },
+    "./variant": {
+      "import": "./dist/modules/variant.mjs",
+      "require": "./dist/modules/variant.js"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "checkout": [
+        "./dist/modules/checkout.d.ts"
+      ],
+      "customer": [
+        "./dist/modules/customer.d.ts"
+      ],
+      "client": [
+        "./dist/client/index.d.ts"
+      ],
+      "discount": [
+        "./dist/modules/discount.d.ts"
+      ],
+      "file": [
+        "./dist/modules/file.d.ts"
+      ],
+      "licenseKey": [
+        "./dist/modules/licenseKey.d.ts"
+      ],
+      "licenseKeyInstance": [
+        "./dist/modules/licenseKeyInstance.d.ts"
+      ],
+      "modules": [
+        "./dist/modules/index.d.ts"
+      ],
+      "order": [
+        "./dist/modules/order.d.ts"
+      ],
+      "orderItem": [
+        "./dist/modules/orderItem.d.ts"
+      ],
+      "product": [
+        "./dist/modules/product.d.ts"
+      ],
+      "store": [
+        "./dist/modules/store.d.ts"
+      ],
+      "subscription": [
+        "./dist/modules/subscription.d.ts"
+      ],
+      "subscriptionInvoice": [
+        "./dist/modules/subscriptionInvoice.d.ts"
+      ],
+      "types": [
+        "./dist/types.d.ts"
+      ],
+      "user": [
+        "./dist/modules/user.d.ts"
+      ],
+      "variant": [
+        "./dist/modules/variant.d.ts"
+      ]
+    }
+  },
+  "scripts": {
+    "dev": "yarn build --watch",
+    "build": "rimraf dist && tsup",
+    "build:prod": "cross-env NODE_ENV=production yarn build",
+    "format": "prettier --write \"**/*.{js,json,ts}\"",
+    "test": "vitest run",
+    "test:watch": "vitest watch",
+    "test:ui": "vitest watch --ui"
+  },
+  "dependencies": {
+    "undici": "^5.20.0"
+  },
+  "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^4.1.1",
+    "@types/node": "^18.14.6",
+    "@vitest/ui": "^0.29.2",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.0.3",
+    "minifaker": "^1.34.1",
+    "prettier": "^2.8.8",
+    "rimraf": "^4.4.0",
+    "tsup": "^6.6.3",
+    "typescript": "^4.9.5",
+    "vitest": "^0.29.2"
+  }
+}
